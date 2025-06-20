@@ -1,14 +1,12 @@
-import pino from 'pino';
-const __dirname = import.meta.dirname;
+const pino = require('pino');
+// const __dirname = import.meta.dirname;
 
-const fileTransport = pino.transport({
-  target: 'pino/file',
-  options: { destination: `${__dirname}/app.log` },
-});
+// const fileTransport = pino.transport({
+//   target: 'pino/file',
+//   options: { destination: `${__dirname}/app.log` },
+// });
 
-
-
-const logger =  pino.transport({
+const logger =  pino({
     level:'info',
     transport:{
         target:'pino-pretty',
@@ -17,7 +15,8 @@ const logger =  pino.transport({
             translateTime:'SYS:standard',
             ignore:'pid,hostname'
         }
-    },fileTransport
+    }
+    // ,fileTransport
 });
 
 module.exports = logger;
