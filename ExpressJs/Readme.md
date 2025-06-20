@@ -49,3 +49,5 @@ ORM FRAMEWORKS
 //vercel, heroku, aws, gcp
 
 //microservice frameworks with NODE
+
+//git remote set-url origin https://username:token@github.com/webquest-nz/whanganuijobs.co.nz.git
