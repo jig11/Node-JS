@@ -3,7 +3,7 @@ const {expect} = require('chai');
 const mongoose = require('mongoose');
 const { MongoMemoryServer } = require('mongodb-memory-server');
 const app = require('../index');
-const Course = require("../schemas/CourseSchema");
+const Course = require("../schemas/courseSchema");
 const User = require("../schemas/userSchema");
 let mongoServer;
 
