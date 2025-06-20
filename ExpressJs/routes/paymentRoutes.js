@@ -1,14 +1,14 @@
 const express = require("express");
 const Payments = require("../schemas/paymentSchema");
 const router = express.Router();
-const pinologger = require('../middleware/pinoMiddleware');
+//const pinologger = require('../middleware/pinoMiddleware');
 
 router.get("/", async (req, res) => {
 try {
 const payments = await Payments.find({});
 res.status(200).send(payments);
 } catch (err) {
-pinologger.error('Error fetching payments:', err);
+//pinologger.error('Error fetching payments:', err);
 res.status(500).send({ error: 'Failed to fetch payments' });
 }
 });
@@ -21,7 +21,7 @@ return res.status(404).send({ error: 'Payments not found' });
 }
 res.status(200).send(payment);
 } catch (err) {
-pinologger.error('Error fetching payment:', err);
+//pinologger.error('Error fetching payment:', err);
 res.status(500).send({ error: 'Failed to fetch payment' });
 }
 });
@@ -59,7 +59,7 @@ amount : req.body.amount
 newPayment.save().then((result) => {
 res.send(result);
 }).catch((err) => {
-pinologger.error('Error fetching payment:', err);
+//pinologger.error('Error fetching payment:', err);
 res.status(500).send({ error: 'Failed to create payment' });
 });
 
