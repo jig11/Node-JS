@@ -2,7 +2,7 @@
 require('dotenv').config();
 
 //import & connect to mongodb
-const mongooseDb = require('./dBConnectivity/db');
+const mongooseDb = require('./dbConnectivity/db');
 const app = require("./index"); // Import the Express app from app.js
 
 mongooseDb();
