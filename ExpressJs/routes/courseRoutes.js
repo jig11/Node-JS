@@ -1,5 +1,5 @@
 const express = require("express");
-const Course = require("../schemas/CourseSchema");
+const Course = require("../schemas/courseSchema");
 const router = express.Router();
 //const pinologger = require('../middleware/pinoMiddleware');
 

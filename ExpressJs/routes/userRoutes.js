@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const authenticateToken = require('../middleware/authenticateTokenMiddleware');
 //const pinologger = require('../middleware/pinoMiddleware');
-const User = require("../schemas/userSchema");
+const User = require("../schemas/courseSchema");
 
 router.post("/signup", async (req, res) => {
   // Create a new user
