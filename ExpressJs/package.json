@@ -2,11 +2,12 @@
   "name": "expressjs",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "mocha --timeout 10000",
     "dev": "nodemon server.js",
-    "hotdev": "node server.js"
+    "hotdev": "node server.js",
+    "start": "node server.js" 
   },
   "keywords": [],
   "author": "",
