@@ -10,6 +10,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: ./ExpressJs
+
     env:
       MONGODB_USERNAME: ${{secrets.MONGODB_USERNAME}}
       MONGODB_PASSWORD: ${{secrets.MONGODB_PASSWORD}}
