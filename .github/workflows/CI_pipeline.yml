@@ -18,6 +18,7 @@ jobs:
       MONGODB_USERNAME: ${{secrets.MONGODB_USERNAME}}
       MONGODB_PASSWORD: ${{secrets.MONGODB_PASSWORD}}
       MONGODB_SERVER: ${{secrets.MONGODB_SERVER}}
+      JWT_SECRET: ${{secrets.JWT_SECRET}}
       
     steps:
       - name: Checkout Code
