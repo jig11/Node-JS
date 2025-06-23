@@ -112,11 +112,9 @@ describe('Users API (MongoDB)', () => {
 
           const user = await request(app).post('/users/signup').send(newUser);
           const res = await request(app).post('/users/login').send(newUser);
-          console.log(res.body)
-          // expect(res.status).to.equal(201);
-          //  expect(res.body).to.include(newCourse);
-          // expect(res.body).to.have.property('token');
-          // expect(res.body).to.have.property('name', userPayload.name);
+          //console.log(res.body)
+          expect(res.status).to.equal(200);
+          expect(res.body).to.have.property('token');
       });
 
     });
