@@ -4,7 +4,7 @@ const router = express.Router();
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const authenticateToken = require('../middleware/authenticateTokenMiddleware');
-const pinologger = require('../middleware/pinoMiddleware');
+// const pinologger = require('../middleware/pinoMiddleware');
 const User = require("../schemas/userSchema");
 
 function generateRefreshToken(user_id) {
@@ -43,7 +43,7 @@ router.post("/signup", async (req, res) => {
     newUser.save().then((result) => {
         res.status(201).send(result);
     }).catch((err) => {
-        pinologger.error(err);
+        // pinologger.error(err);
         res.status(500).send({ error: 'Failed to SignUp User.' });
     });
 });
@@ -67,12 +67,12 @@ router.post("/login", async (req, res) => {
           //     refresh_token:refresh_token
           // }
           res.json({token});
-        } 
-        catch (err) 
-        {
-              pinologger.error('Error fetching users:', err);
-              res.status(500).send({ error: 'Failed to fetch users.' });
-        }
+          } 
+          catch (err) 
+          {
+                //pinologger.error('Error fetching users:', err);
+                res.status(500).send({ error: 'Failed to fetch users.' });
+          }
 });
 
 // router.post('/login',Login);
